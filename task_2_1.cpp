@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
 
-std::vector<size_t> pi() {
-   std::vector<size_t> ans;
+std::vector<size_t> get_pi() {
+   std::vector<size_t> pi;
    size_t tmp = 0;
    while (std::cin >> tmp) {
-       ans.push_back(tmp);
+       pi.push_back(tmp);
    }
-   return ans;
+   return pi;
 }
 
 std::string find_min_string_by_pi(const std::vector<size_t>& pi) {
@@ -30,6 +30,6 @@ std::string find_min_string_by_pi(const std::vector<size_t>& pi) {
 }
 
 int main() {
-    std::cout << find_min_string_by_pi(pi()) << '\n';
+    std::cout << find_min_string_by_pi(get_pi()) << '\n';
     return 0;
 }
